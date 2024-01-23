@@ -18,7 +18,7 @@ struct ContentView: View {
     }
     var body: some View {
         Form {
-            VStack {
+            VStack(alignment: .leading, spacing: 20) {
                 Text("\(kitchen.ingredients[selectedFood].displayInfo())")
                 Button("Random Food", action: {
                     selectedFood += 1
