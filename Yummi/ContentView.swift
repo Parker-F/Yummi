@@ -13,20 +13,20 @@ struct ContentView: View {
         didSet {
             if selectedFood >= kitchen.ingredients.count {
                 selectedFood = 0
-                
+            }
+        }
+    }
     var body: some View {
-        VStack {
-            Text("\(kitchen.ingredients[selectedFood].displayInfo())")
-            Button("Random Food", action: {
-                selectedFood += 1
-            })
-                   }
-                   }
-                   }
-                   }
-                   }
+        Form {
+            VStack {
+                Text("\(kitchen.ingredients[selectedFood].displayInfo())")
+                Button("Random Food", action: {
+                    selectedFood += 1
+                })
+            }
+        }
+    }
 }
-
 
 #Preview {
     ContentView()
