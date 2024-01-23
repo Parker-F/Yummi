@@ -14,6 +14,7 @@
 		C3542D632B5FC63300B3F58C /* YummiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3542D622B5FC63300B3F58C /* YummiTests.swift */; };
 		C3542D6D2B5FC63300B3F58C /* YummiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3542D6C2B5FC63300B3F58C /* YummiUITests.swift */; };
 		C3542D6F2B5FC63300B3F58C /* YummiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3542D6E2B5FC63300B3F58C /* YummiUITestsLaunchTests.swift */; };
+		C3542D7C2B5FCBD200B3F58C /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3542D7B2B5FCBD200B3F58C /* Ingredients.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C3542D682B5FC63300B3F58C /* YummiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YummiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3542D6C2B5FC63300B3F58C /* YummiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITests.swift; sourceTree = "<group>"; };
 		C3542D6E2B5FC63300B3F58C /* YummiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C3542D7B2B5FCBD200B3F58C /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				C3542D532B5FC62F00B3F58C /* ContentView.swift */,
 				C3542D552B5FC63200B3F58C /* Assets.xcassets */,
 				C3542D572B5FC63200B3F58C /* Preview Content */,
+				C3542D7B2B5FCBD200B3F58C /* Ingredients.swift */,
 			);
 			path = Yummi;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3542D542B5FC62F00B3F58C /* ContentView.swift in Sources */,
+				C3542D7C2B5FCBD200B3F58C /* Ingredients.swift in Sources */,
 				C3542D522B5FC62F00B3F58C /* YummiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
