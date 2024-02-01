@@ -8,7 +8,6 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
-    @State private var kitchen = Kitchen()
     @State var inputName = ""
     @State var inputQuantity = 0
     @State var inputUnit = ""
@@ -30,32 +29,32 @@ struct ContentView: View {
         }
     }
     var body: some View {
-        Form {
-            Section{
-                Text("DOESN'T WORK")
-            }
-            Section{
+        Form{
+            Section {
                 VStack(alignment: .leading, spacing: 20) {
                     Text("\(ingredients[selectedFood].displayInfo())")
-                    Button("Random Food", action: {
+                    Button("Next ingredient", action: {
                         selectedFood += 1
                     })
-                    
                 }
             }
             Section {
-                VStack{
                     Text("Enter a NEW Ingredient")
                     TextField("Name", text: $inputName)
                     Stepper("Quantity: \(inputQuantity)", value: $inputQuantity, in: 0...Int.max)
                     TextField("Unit", text: $inputUnit)
                     TextField("Category", text: $inputCategory)
                     TextField("Expiry Date", text: $inputExpiryDate)
-                    Button("Enter") {
+                    Button("Add Ingredient") {
                         let newIngredient = Ingredient(name: inputName, quantity: inputQuantity, unit: inputUnit, category: inputCategory, expiryDate: inputExpiryDate)
                         ingredients.append(newIngredient)
+                        selectedFood = ingredients.count - 1
+                        inputName = ""
+                        inputQuantity = 0
+                        inputUnit = ""
+                        inputCategory = ""
+                        inputExpiryDate = ""
                     }
-                }
             }
         }
     }

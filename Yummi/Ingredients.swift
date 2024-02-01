@@ -25,6 +25,3 @@ Expiry Date: \(expiryDate)
 """)
     }
 }
-struct Kitchen {
-
-}
