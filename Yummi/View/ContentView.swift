@@ -14,10 +14,13 @@ struct ContentView: View {
     @State var inputCategory = ""
     @State var inputExpiryDate = ""
     
-    @State var ingredients = [Ingredient(name: "Cheese", quantity: 3, unit: "kilograms", category: "Dairy", expiryDate: "Never"),
-                       Ingredient(name: "Beans", quantity: 32, unit: "cans", category: "Canned Food", expiryDate: "Never"),
-                       Ingredient(name: "Bread", quantity: 2, unit: "Loaves", category: "Bakery", expiryDate: "1/2/2023"),
-                       Ingredient(name: "Pineapple Juice", quantity: 4, unit: "Litres", category: "Juice", expiryDate: "3/2/2023")]
+    @State var ingredients = 
+        [Ingredient(name: "Cheese", quantity: 3, unit: "kilograms", category: "Dairy", expiryDate: "Never"),
+           Ingredient(name: "Beans", quantity: 32, unit: "cans", category: "Canned Food", expiryDate: "Never"),
+           Ingredient(name: "Bread", quantity: 2, unit: "Loaves", category: "Bakery", expiryDate: "2024/02/01"),
+           Ingredient(name: "Pineapple Juice", quantity: 4, unit: "Litres", category: "Juice", expiryDate: "2024/01/31"),
+            Ingredient(name: "Mince", quantity: 500, unit: "grams", category: "Meat", expiryDate: "2024/02/05"),
+        ]
 
 
 
