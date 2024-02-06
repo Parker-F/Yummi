@@ -20,6 +20,13 @@ struct ContentView: View {
            Ingredient(name: "Bread", quantity: 2, unit: "Loaves", category: "Bakery", expiryDate: "2024/02/01"),
            Ingredient(name: "Pineapple Juice", quantity: 4, unit: "Litres", category: "Juice", expiryDate: "2024/01/31"),
             Ingredient(name: "Mince", quantity: 500, unit: "grams", category: "Meat", expiryDate: "2024/02/05"),
+         Ingredient(name: "Onion", quantity: 3, unit: "pieces", category: "Vegetable", expiryDate: "2024/02/07"),
+         Ingredient(name: "Garlic", quantity: 1, unit: "bulb", category: "Vegetable", expiryDate: "2024/02/10"),
+         Ingredient(name: "Tomato Sauce", quantity: 500, unit: "milliliters", category: "Condiment", expiryDate: "2024/03/15"),
+         Ingredient(name: "Spaghetti", quantity: 400, unit: "grams", category: "Pasta", expiryDate: "2024/04/20"),
+         Ingredient(name: "Olive Oil", quantity: 250, unit: "milliliters", category: "Cooking Oil", expiryDate: "2024/05/30"),
+         Ingredient(name: "Salt", quantity: 250, unit: "grams", category: "Seasoning", expiryDate: "2025/01/01"),
+         Ingredient(name: "Pepper", quantity: 100, unit: "grams", category: "Seasoning", expiryDate: "2025/01/01")
         ]
 
 
