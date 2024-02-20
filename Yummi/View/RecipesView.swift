@@ -21,6 +21,8 @@ struct RecipesView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("\(recipes[selectedRecipe].displayInfo())")
+            Text("\(recipes[selectedRecipe + 1].displayInfo())")
+            Text("\(recipes[selectedRecipe + 2].displayInfo())")
             Button("Next Recipe", action: {
                 selectedRecipe += 1
             })
