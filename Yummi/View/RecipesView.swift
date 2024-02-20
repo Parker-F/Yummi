@@ -10,25 +10,16 @@ import SwiftUI
 
 struct RecipesView: View {
     var recipes: [Recipe]
-    @State private var selectedRecipe: Int = 0 {
-        didSet {
-            if selectedRecipe >= recipes.count {
-                selectedRecipe = 0
-            }
-        }
-    }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Text("\(recipes[selectedRecipe].displayInfo())")
-            Text("\(recipes[selectedRecipe + 1].displayInfo())")
-            Text("\(recipes[selectedRecipe + 2].displayInfo())")
-            Button("Next Recipe", action: {
-                selectedRecipe += 1
+        List {
+            ForEach(recipes) { recipe in
+                Text(recipe)
+            }
+
             })
         }
     }
-}
 
 #Preview {
     RecipesView(recipes: Recipe.recipes)
