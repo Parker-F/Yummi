@@ -18,10 +18,7 @@ struct Recipe: Identifiable {
     }
     
     func displayInfo() -> String {
-        return (
-        """
-Name: \(name)
-""")
+        return ("\(name)")
     }
     
     static var recipes: [Recipe] {
@@ -103,7 +100,8 @@ Name: \(name)
                      Ingredient(name: "Black Pepper", quantity: 4, unit: "grams", category: "Seasoning", expiryDate: "2025/01/01")
                     ],
          isFavourite: true,
-         rating: 4.7)
+         rating: 4.7),
+         
         ]
     }
 }
