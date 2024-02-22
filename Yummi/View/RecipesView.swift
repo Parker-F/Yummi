@@ -14,13 +14,11 @@ struct RecipesView: View {
     var body: some View {
         List {
             ForEach(recipes) { recipe in
-                Text(recipe)
+                Text(recipe.displayInfo())
             }
-
-            })
         }
     }
-
+}
 #Preview {
     RecipesView(recipes: Recipe.recipes)
 }

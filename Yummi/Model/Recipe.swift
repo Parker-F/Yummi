@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct Recipe {
+struct Recipe: Identifiable {
     let name: String
     let ingredients: [Ingredient]
     let isFavourite: Bool
     let rating: Double
+    
+    var id: String {
+        name
+    }
     
     func displayInfo() -> String {
         return (
