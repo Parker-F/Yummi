@@ -12,7 +12,7 @@ struct IngredientsView: View {
     @State var inputQuantity = 0
     @State var inputUnit = ""
     @State var inputCategory = ""
-    @State var inputExpiryDate = ""
+    @State var inputExpiryDate = Date()
     
     @State var ingredients = 
         [Ingredient(name: "Eggs", quantity: 12, unit: "pieces", category: "Dairy", expiryDate: "2024/02/15"),
@@ -59,7 +59,7 @@ struct IngredientsView: View {
         }
     }
     var body: some View {
-        Form{
+        Form {
             Section {
                 VStack(alignment: .leading, spacing: 20) {
                     Text("\(ingredients[selectedFood].displayInfo())")
@@ -68,28 +68,26 @@ struct IngredientsView: View {
                     })
                 }
             }
-            Section {
-                    Text("Enter a NEW Ingredient")
-                    TextField("Name", text: $inputName)
-                    Stepper("Quantity: \(inputQuantity)", value: $inputQuantity, in: 0...Int.max)
-                    TextField("Unit", text: $inputUnit)
-                    TextField("Category", text: $inputCategory)
-                    TextField("Expiry Date", text: $inputExpiryDate)
-                    Button("Add Ingredient") {
-                        let newIngredient = Ingredient(name: inputName, quantity: inputQuantity, unit: inputUnit, category: inputCategory, expiryDate: inputExpiryDate)
-                        ingredients.append(newIngredient)
-                        selectedFood = ingredients.count - 1
-                        inputName = ""
-                        inputQuantity = 0
-                        inputUnit = ""
-                        inputCategory = ""
-                        inputExpiryDate = ""
-                    }
+            Section(header: Text("Enter a new ingredient")) {
+                TextField("Name", text: $inputName)
+                Stepper("Quantity: \(inputQuantity)", value: $inputQuantity, in: 0...Int.max)
+                TextField("Unit", text: $inputUnit)
+                TextField("Category", text: $inputCategory)
+                DatePicker("Expiry Date", selection: $inputExpiryDate)
+                Button("Add Ingredient") {
+                    let newIngredient = Ingredient(name: inputName, quantity: inputQuantity, unit: inputUnit, category: inputCategory, expiryDate: inputExpiryDate)
+                    ingredients.append(newIngredient)
+                    selectedFood = ingredients.count - 1
+                    inputName = ""
+                    inputQuantity = 0
+                    inputUnit = ""
+                    inputCategory = ""
+                    inputExpiryDate = Date()
+                }
             }
         }
     }
 }
-
 #Preview {
-    ContentView()
+    IngredientsView()
 }

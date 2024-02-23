@@ -12,7 +12,7 @@ struct Ingredient {
     var quantity: Int
     let unit: String
     let category: String
-    let expiryDate: String
+    let expiryDate: Date
     
     func displayInfo() -> String {
         return (
